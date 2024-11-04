@@ -8,12 +8,12 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Router, Route, Set } from '@redwoodjs/router'
-import NavbarLayout from './layouts/NavbarLayout/NavbarLayout'
+import MainPageLayout from './layouts/MainPageLayout/MainPageLayout'
 
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={NavbarLayout}>
+      <Set wrap={MainPageLayout}>
         <Route path="/" page={HomePage} name="home" />
       </Set>
       <Route notfound page={NotFoundPage} />

@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import NavbarLayout from './NavbarLayout'
+import MainPageLayout from './MainPageLayout'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //   https://redwoodjs.com/docs/testing#testing-pages-layouts
 
-describe('NavbarLayout', () => {
+describe('MainPageLayout', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<NavbarLayout />)
+      render(<MainPageLayout />)
     }).not.toThrow()
   })
 })
