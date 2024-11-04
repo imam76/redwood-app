@@ -5,7 +5,7 @@ const themeSettings = {
     colorSuccess: "#9283e0",
     colorWarning: "#ffd581",
     colorError: "#00dc90",
-    borderRadius: 8
+    borderRadius: 8,
   },
   components: {
     Typography: {
@@ -13,7 +13,10 @@ const themeSettings = {
       fontSizeHeading2: 36,
       fontSizeHeading3: 28,
       fontSizeHeading4: 18
-    }
+    },
+    Layout: {
+      headerBg: '#ffffff',
+    },
   }
 };
 

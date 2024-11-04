@@ -1,4 +1,4 @@
-import { Layout, Menu } from "antd";
+import { Flex, Layout, Menu } from "antd";
 const { Header } = Layout;
 
 const items = [
@@ -21,13 +21,23 @@ const Navbar = () => {
   return (
     <div>
       <Layout>
-        <Header style={{ display: 'flex', alignItems: 'center', padding: 0 }} prefix="demo">
-          <div className="demo-logo" />
+        <Header
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            padding: 0
+          }}
+        >
+          <Flex
+          // style={{ background: 'white' }}
+          >
+            <img src="./theme/static/cherrypick-small.png" width={200} />
+          </Flex>
           <Menu
             mode="horizontal"
             defaultSelectedKeys={['2']}
             items={items}
-            style={{ flex: 1, minWidth: 0, width: '100%' }}
+            style={{ flex: 1, minWidth: 0 }}
           />
         </Header>
       </Layout>
