@@ -13,13 +13,13 @@ interface AppProps {
 }
 
 const App = ({ children }: AppProps) => (
-  <ConfigProvider theme={themeSettings}>
-    <FatalErrorBoundary page={FatalErrorPage}>
-      <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+  <FatalErrorBoundary page={FatalErrorPage}>
+    <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
+      <ConfigProvider theme={themeSettings}>
         <RedwoodApolloProvider>{children}</RedwoodApolloProvider>
-      </RedwoodProvider>
-    </FatalErrorBoundary>
-  </ConfigProvider>
+      </ConfigProvider>
+    </RedwoodProvider>
+  </FatalErrorBoundary>
 )
 
 export default App
