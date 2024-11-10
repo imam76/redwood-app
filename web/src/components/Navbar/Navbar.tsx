@@ -1,49 +1,46 @@
-import { Flex, Layout, Menu } from "antd";
-const { Header } = Layout;
+import { Col, Flex, Layout, Menu, Row, theme } from "antd";
+const { Header, Footer, Sider, Content } = Layout;
 
-const items = [
-  {
-    key: 'popular',
-    label: `Popular`,
-  },
-  {
-    key: 'new',
-    label: `New`,
-  },
-  {
-    key: 'reading-list',
-    label: `Reading List`,
-  }
-];
+const items = new Array(3).fill(null).map((_, index) => ({
+  key: index + 1,
+  label: `nav ${index + 1}`,
+}));
 
 const Navbar = () => {
-
+  const {
+    token: { Layout: { headerBg } },
+  } = theme.useToken();
   return (
-    <div>
-      <Layout>
-        <Header
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: 0
-          }}
-        >
-          <Flex
-          // style={{ background: 'white' }}
-          >
-            <img src="./theme/static/cherrypick-small.png" width={200} />
-          </Flex>
-          <Menu
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            items={items}
-            style={{ flex: 1, minWidth: 0 }}
-          />
-        </Header>
-      </Layout>
-    </div>
-  );
-
+    <Layout>
+      <Header
+        style={{
+          padding: 0
+        }}
+      >
+        <Row justify="center">
+          <Col span={22}>
+            <Flex
+              align="center"
+            >
+              <img className="h-8 w-8 mr-2" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+              <Menu
+                mode="horizontal"
+                defaultSelectedKeys={['2']}
+                items={items}
+                style={{
+                  flex: 1,
+                  width: '100%',
+                  backgroundColor: headerBg,
+                  border: 'none',
+                  boxShadow: 'none',
+                }}
+              />
+            </Flex>
+          </Col>
+        </Row>
+      </Header>
+    </Layout >
+  )
 }
 
 export default Navbar
