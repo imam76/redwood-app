@@ -13,7 +13,7 @@ const HeaderContentFooterLayout = ({
     <>
       <Navbar />
       <Row justify={'center'}>
-        <Col span={22}>
+        <Col span={20}>
           <div style={{ paddingTop: 32 }}>
             {children}
           </div>

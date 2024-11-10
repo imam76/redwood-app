@@ -1,12 +1,25 @@
+import { Link, routes } from "@redwoodjs/router";
 import { Col, Flex, Layout, Menu, Row, theme } from "antd";
-const { Header, Footer, Sider, Content } = Layout;
+import { useTranslation } from "react-i18next";
+const { Header } = Layout;
 
-const items = new Array(3).fill(null).map((_, index) => ({
-  key: index + 1,
-  label: `nav ${index + 1}`,
-}));
 
 const Navbar = () => {
+  const { t } = useTranslation();
+  const items = [
+    {
+      key: 'home',
+      label: <Link to={routes.home()}>{t('home')}</Link>,
+    },
+    {
+      key: 'news',
+      label: <Link to={routes.news()}>{t('news')}</Link>,
+    },
+    {
+      key: 'topics',
+      label: <Link to={routes.topics()}>{t('topics')}</Link>,
+    }
+  ];
   const {
     token: { Layout: { headerBg } },
   } = theme.useToken();
@@ -18,7 +31,7 @@ const Navbar = () => {
         }}
       >
         <Row justify="center">
-          <Col span={22}>
+          <Col span={20}>
             <Flex
               align="center"
             >

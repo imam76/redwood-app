@@ -15,6 +15,8 @@ const Routes = () => {
     <Router>
       <Set wrap={HeaderContentFooterLayout}>
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/news" page={NewsPage} name="news" />
+        <Route path="/topics" page={TopicsPage} name="topics" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
