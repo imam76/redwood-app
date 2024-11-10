@@ -8,7 +8,6 @@
 // 'src/pages/Admin/BooksPage/BooksPage.js' -> AdminBooksPage
 
 import { Router, Route, Set } from '@redwoodjs/router'
-
 import HeaderContentFooterLayout from './layouts/HeaderContentFooterLayout/HeaderContentFooterLayout'
 
 const Routes = () => {
