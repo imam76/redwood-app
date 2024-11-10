@@ -7,7 +7,9 @@ import { ConfigProvider, App as AppAntd } from 'antd';
 import FatalErrorPage from 'src/pages/FatalErrorPage';
 import themeSettings from '../config/theme';
 import '../config/i18n/config'
-import './index.css';
+import './index.css'
+import './scaffold.css'
+;
 interface AppProps {
   children?: ReactNode
 }

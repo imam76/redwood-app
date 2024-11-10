@@ -6,7 +6,6 @@ const themeSettings = {
     colorWarning: "#ffd581",
     colorError: "#00dc90",
     wireframe: false,
-    fontSize: 16,
     fontFamily: "Host Grotesk, sans-serif",
   },
   components: {

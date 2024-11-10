@@ -31,7 +31,11 @@ const Navbar = () => {
         }}
       >
         <Row justify="center">
-          <Col span={20}>
+          <Col
+            xs={{ flex: '80%' }}
+            sm={{ flex: '80%' }}
+            md={{ flex: '60%' }}
+          >
             <Flex
               align="center"
             >
