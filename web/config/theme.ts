@@ -7,6 +7,7 @@ const themeSettings = {
     colorError: "#00dc90",
     wireframe: false,
     fontSize: 16,
+    fontFamily: "Host Grotesk, sans-serif",
   },
   components: {
     Layout: {
