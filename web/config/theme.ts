@@ -1,26 +1,18 @@
 const themeSettings = {
   token: {
-    colorPrimary: "#2d3b96",
-    colorInfo: "#2d3b96",
-    colorSuccess: "#27ae60",
-    colorWarning: "#e2b93b",
-    colorError: "#eb5757",
-    borderRadius: 8,
+    colorPrimary: "#ff5480",
+    colorInfo: "#ff5480",
+    colorSuccess: "#9283e0",
+    colorWarning: "#ffd581",
+    colorError: "#00dc90",
+    wireframe: false,
     fontSize: 16,
-    wireframe: false
   },
   components: {
-    Typography: {
-      fontSizeHeading1: 48,
-      fontSizeHeading2: 36,
-      fontSizeHeading3: 28,
-      fontSizeHeading4: 18
+    Layout: {
+      headerBg: '#F9F9Fb'
     },
-    Input: {
-      inputFontSize: 16,
-      paddingBlock: 8,
-      paddingInline: 16
-    }
+
   }
 };
 

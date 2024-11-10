@@ -8,7 +8,7 @@ const resourcesLang = {
   // Arabic
   id: {
     translation: {
-      hello_world: "مرحباً بالعالم!",
+      hello_world: 'Hallo dunia!',
     },
   },
 };

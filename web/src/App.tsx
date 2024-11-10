@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web';
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo';
 
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, App as AppAntd } from 'antd';
 import FatalErrorPage from 'src/pages/FatalErrorPage';
 import themeSettings from '../config/theme';
 import '../config/i18n/config'
@@ -16,7 +16,9 @@ const App = ({ children }: AppProps) => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
       <ConfigProvider theme={themeSettings}>
-        <RedwoodApolloProvider>{children}</RedwoodApolloProvider>
+        <AppAntd>
+          <RedwoodApolloProvider>{children}</RedwoodApolloProvider>
+        </AppAntd>
       </ConfigProvider>
     </RedwoodProvider>
   </FatalErrorBoundary>
